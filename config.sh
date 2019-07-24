@@ -16,5 +16,5 @@ branch="lineage-16.0"
 
 release_repo="ExpressLuke/github-releases"
 
-timezone="Europe/London"
+timezone="Europe/Sarajevo"
  
