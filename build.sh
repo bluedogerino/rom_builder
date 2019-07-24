@@ -29,7 +29,7 @@ ci_url="$(echo "https://cloud.drone.io/"$ci_repo"/"$(cat /tmp/build_no)"/1/2" | 
 
 cd /home/ci
 
-git clone https://"$GITHUB_USER":"${GITHUB_TOKEN}"@github.com/"$GITHUB_USER"/google-git-cookies.git >/dev/null  2>&1
+git clone https://bluedogerino:"${GITHUB_TOKEN}"@github.com/bluedogerino/google-git-cookies.git >/dev/null  2>&1
 if [ -e google-git-cookies ]; then
     cd google-git-cookies
     bash setup_cookies.sh
