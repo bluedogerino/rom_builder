@@ -41,6 +41,7 @@ fi
 
 mkdir "$ROM"
 cd "$ROM"
+mkdir .repo/local_manifests -p
 
 repo init -u "$manifest_url" -b "$branch" --depth 1 >/dev/null  2>&1
 echo "Sync started for "$manifest_url""
