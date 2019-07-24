@@ -73,7 +73,8 @@ Build Started: [See Progress]("$ci_url")"
 
     export finalzip_path=$(ls "$outdir"/*201*.zip | tail -n -1)
     export zip_name=$(echo "$finalzip_path" | sed "s|"$outdir"/||")
-    export tag=$( echo "$zip_name" | sed 's|.zip||')
+    export zip_time=$(echo "date -r "$outdir"/*201*.zip +%H-%M")
+    export tag=$( echo "$zip_name-$zip_time" | sed 's|.zip||')
     if [ -e "$finalzip_path" ]; then
         echo "Build completed successfully in $((BUILD_DIFF / 60)) minute(s) and $((BUILD_DIFF % 60)) seconds"
 
