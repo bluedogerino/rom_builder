@@ -67,7 +67,7 @@ Build Started: [See Progress]("$ci_url")"
         python3 /drone/src/dependency_cloner.py
     fi
     lunch "$rom_vendor_name"_"$device"-userdebug >/dev/null  2>&1
-    mka bacon | grep "$device"
+    mka bacon -j64 | grep "$device"
     BUILD_END=$(date +"%s")
     BUILD_DIFF=$((BUILD_END - BUILD_START))
 
